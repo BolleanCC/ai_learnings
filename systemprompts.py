@@ -25,11 +25,26 @@ def add_assistant_message(messages, text):
 #     return message.content[0].text
 
 # chat function with system prompts
-def chat(messages, system=None):
+# def chat(messages, system=None):
+#     params = {
+#         "model": model,
+#         "max_tokens": 1000,
+#         "messages": messages,
+#     }
+
+#     if system:
+#         params["system"] = system
+    
+#     message = client.messages.create(**params)
+#     return message.content[0].text
+
+# Implementing temperature in code
+def chat(messages, system=None, temperature=1.0):
     params = {
         "model": model,
         "max_tokens": 1000,
         "messages": messages,
+        "temperature": temperature
     }
 
     if system:
