@@ -60,19 +60,8 @@ def chat(messages, system=None):
 # Make an initial list of messages
 messages = []
 
-# Use a 'While True' loop to run the chatbot forever
-while True:
-    # Get user input
-    user_input = input("> ")
+add_user_message(messages, "Write a Python function that checks a string for duplicate characters.")
 
-    if user_input.lower() in ["q", "quit", "exit"]:
-        break
+answer = chat(messages, system="You are a Python enginner who writes very concise code")
 
-    # Add user input to the messages list
-    add_user_message(messages, user_input)
-    # Call Claude with the 'chat' function
-    answer = chat(messages)
-    # Add generated text to the list of messages
-    add_assistant_message(messages, answer)
-    # Print the generated text
-    print(answer)
+print(answer)
