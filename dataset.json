@@ -1,0 +1,14 @@
+[
+  {
+    "task": "Parse an AWS S3 bucket name from an S3 URI (e.g., 's3://my-bucket/path/to/file.txt') and extract just the bucket name",
+    "format": "regex"
+  },
+  {
+    "task": "Create a JSON configuration object for an AWS Lambda function that specifies runtime as Python 3.11, memory as 256 MB, and timeout as 30 seconds",
+    "format": "json"
+  },
+  {
+    "task": "Write a Python function that takes an AWS CloudWatch log timestamp in milliseconds and converts it to a human-readable ISO 8601 datetime string",
+    "format": "python"
+  }
+]
